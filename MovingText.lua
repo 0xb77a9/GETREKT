@@ -17,4 +17,4 @@ function Draw(text)
 end
 
 -- Callbacks
-callbacks.register("paint", main)
+callbacks.register("paint", Draw)
