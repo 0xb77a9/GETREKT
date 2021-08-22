@@ -6,9 +6,6 @@ local x, y = client.screen_size()
 local loc = x
 y = 0
 
--- GUI
-local Enable = gui.new_checkbox("Enable", false)
-
 -- Functions
 function Draw(text)
     if (loc == -20) then loc = x + 20 end
