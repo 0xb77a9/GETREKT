@@ -15,7 +15,6 @@ function Draw(text)
   render.text(Text, loc, 0, 15, 255, 255, 255, 255)
 end
 function Sup()
-    Text = text
     Draw("test")
 end
 -- Callbacks
