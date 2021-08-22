@@ -16,7 +16,7 @@ function Draw(text)
 end
 function Sup()
     Text = text
-    Draw(Text)
+    Draw("test")
 end
 -- Callbacks
 callbacks.register("paint", Sup)
