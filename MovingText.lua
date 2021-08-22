@@ -4,19 +4,14 @@
 -- Locals
 local x, y = client.screen_size()
 local loc = x
-local Text
 y = 0
 
 -- Functions
-function Draw(text)
+function Draw()
   Text = text
   if (loc == -20) then loc = x + 20 end
   loc = loc - 1
-  render.text(Text, loc, 0, 15, 255, 255, 255, 255)
-end
-function Sup()
-    Text = text
-    Draw(Text)
+  render.text("SUUUUUUUUUUUUUUUUUUUUUUUUUUUP", loc, 0, 15, 255, 255, 255, 255)
 end
 -- Callbacks
-callbacks.register("paint", Sup)
+callbacks.register("paint", Draw)
