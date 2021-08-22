@@ -10,7 +10,7 @@ y = 0
 local Enable = gui.new_checkbox("Enable", false)
 
 -- Functions
-function main(text)
+function Draw(text)
     if (loc == -20) then loc = x + 20 end
     loc = loc - 1
     render.text(text, loc, 0, 15, 255, 255, 255, 255)
