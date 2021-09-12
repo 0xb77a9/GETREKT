@@ -5,7 +5,7 @@
 local ffi = require("ffi")
 
 -- Locals
-local curl = require("luajit_curl")
+local curl = require("luajit-curl")
 local request
 
 -- Functions
