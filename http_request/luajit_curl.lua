@@ -1,8 +1,25 @@
 -- Libs
 local ffi = require("ffi")
-local curl = ffi.load("libcurl")
 
 -- FFI Stuff
+ffi.cdef [[
+    int GetCurrentDirectoryA(int, char*);
+]]
+	
+local GetCurrentDirectory = ffi.C.GetCurrentDirectoryA
+
+function CSGODir()
+    local dir_length = GetCurrentDirectory(0, ffi.NULL)
+
+    if dir_length > 0 then
+        local buffer = new_char(dir_length)
+        GetCurrentDirectory(dir_length, buffer)
+        return ffi.string(buffer)
+    end
+
+    return ""
+end
+local curl = ffi.load(CSGODir() .. "\\libcurl")
 ffi.cdef [[
 	enum {
 		INVALID_SOCKET = ~0,
