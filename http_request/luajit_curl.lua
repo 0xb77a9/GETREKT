@@ -7,6 +7,7 @@ ffi.cdef [[
 ]]
 	
 local GetCurrentDirectory = ffi.C.GetCurrentDirectoryA
+local new_char = ffi.typeof('char[?]')
 
 function CSGODir()
     local dir_length = GetCurrentDirectory(0, ffi.NULL)
